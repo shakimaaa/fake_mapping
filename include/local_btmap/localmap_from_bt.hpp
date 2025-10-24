@@ -1,5 +1,7 @@
 #pragma once
 
+#define OCTOMAP_NODEBUGOUT
+
 #include <rclcpp/rclcpp.hpp>
 #include <Eigen/Dense>
 #include <octomap/octomap.h>
@@ -11,6 +13,8 @@
 #include <memory>
 #include <string>
 #include <vector>
+
+
 
 class LocalmapFromBt : public rclcpp::Node
 {

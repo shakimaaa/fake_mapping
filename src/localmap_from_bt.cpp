@@ -26,7 +26,7 @@ LocalmapFromBt::LocalmapFromBt() : Node("localmap_from_bt") {
         return;
     }
 
-    odomtery_sub_ = this->create_subscription<nav_msgs::msg::Odometry>("/odom", 10, 
+    odomtery_sub_ = this->create_subscription<nav_msgs::msg::Odometry>("/odometry_", 10, 
         std::bind(&LocalmapFromBt::odometryCallback, this, std::placeholders::_1));
     
     map_pub_ = this->create_publisher<octomap_msgs::msg::Octomap>("/localmap", 10);
